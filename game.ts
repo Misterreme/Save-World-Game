@@ -22,7 +22,7 @@ async function game() {
 
 function loadingGame(length: number, text: string): Promise<void> {
     return new Promise((resolve) => {
-        let progress = 30;
+        let progress = 0;
         let interval = setInterval(() => {
             let progressPercentage = (progress / length) * 100;
             process.stdout.write(cl.green(`\r${" ".repeat(13)}[${"█".repeat(progress)}] ${progressPercentage.toFixed(0)}%`));
