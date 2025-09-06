@@ -102,21 +102,8 @@ Si ves errores como “Error: spawn C:\\ffmpeg\\bin\\ffplay.exe ENOENT”, insta
 
 - `npm run dev`: ejecuta el juego con nodemon (`src/index.ts`).
 
-Sugerencias para agregar en el futuro:
-
-- `npm run build`: compilar TypeScript a `dist/`.
-- `npm start`: ejecutar `node dist/index.js`.
-
 ## Portabilidad y notas
 
 - Las rutas de `ffplay` están fijadas para Windows. En otros sistemas, configura el path del player o añade `ffplay` al PATH.
-- Este proyecto usa módulos CommonJS (`require/module.exports`) por compatibilidad con `ts-node` y `nodemon` tal como está configurado.
+- Este proyecto usa módulos CommonJS (`require/module.exports`) por compatibilidad con `ts-node`.
 - Si deseas compilar a JavaScript, habilita en `tsconfig.json` las opciones `rootDir: "src"` y `outDir: "dist"`, y agrega scripts de build/start.
-
-## Contribuciones
-
-Issues y PRs bienvenidos. Asegúrate de seguir el estilo existente y probar las rutas de audio antes de abrir un PR.
-
-## Licencia
-
-Ver archivo `LICENSE` si se agrega; por defecto, ISC (según `package.json`).
