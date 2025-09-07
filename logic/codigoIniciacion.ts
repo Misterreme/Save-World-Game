@@ -4,7 +4,7 @@ const { destroydScene } = require('../engine/scenes');
 const { escapeScene } = require('../engine/scenes');
 const { playSound } = require('../engine/audio');
 
-function generarCodigoSeguridad() {
+async function generarCodigoSeguridad() {
     const codigo: number[] = [];
 
     while (codigo.length < 10) {
@@ -15,7 +15,7 @@ function generarCodigoSeguridad() {
     }
 
     codigo.sort((a, b) => b - a); // orden descendente
-    console.log(cl.green("🔢 Código de iniciación generado:"));
+    console.log(cl.green("Codigo de iniciacion generado:"));
     console.log(cl.yellow(codigo.join("\n")));
 
     const seguir = rl.question(cl.blue("\nEscribe 'si' para continuar: "));
@@ -25,14 +25,12 @@ function generarCodigoSeguridad() {
     
         if (Math.random() < probabilidadAtaque) {
             console.log(cl.red("\n¡Godzilla te ha detectado y atacó! Has perdido la nave."));
-            console.log(cl.red(`>===>          >>       >=>       >=> >=======>           >===>      >=>         >=> >=======> >======>     
-                >>    >=>       >>=>      >> >=>   >>=> >=>               >=>    >=>    >=>       >=>  >=>       >=>    >=>   
-               >=>             >> >=>     >=> >=> > >=> >=>             >=>        >=>   >=>     >=>   >=>       >=>    >=>   
-               >=>            >=>  >=>    >=>  >=>  >=> >=====>         >=>        >=>    >=>   >=>    >=====>   >> >==>      
-               >=>   >===>   >=====>>=>   >=>   >>  >=> >=>             >=>        >=>     >=> >=>     >=>       >=>  >=>     
-                >=>    >>   >=>      >=>  >=>       >=> >=>               >=>     >=>       >===>      >=>       >=>    >=>   
-                 >====>    >=>        >=> >=>       >=> >=======>           >===>            >=>       >=======> >=>      >=> 
-                                                                                                                              `));
+            console.log(cl.red(`____    _    __  __ _____    _____     _______ ____  
+  / ___|  / \  |  \/  | ____|  / _ \ \   / / ____|  _ \ 
+ | |  _  / _ \ | |\/| |  _|   | | | \ \ / /|  _| | |_) |
+ | |_| |/ ___ \| |  | | |___  | |_| |\ V / | |___|  _ < 
+  \____/_/   \_\_|  |_|_____|  \___/  \_/  |_____|_| \_\
+                                                        `));
             playSound("game-over");
             process.exit(0); 
 

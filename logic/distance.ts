@@ -3,6 +3,9 @@ const cl = require('chalk');
 
 function calcularDistances() {
     console.clear();
+    console.log("\n");
+    console.log("\n");
+    console.log("\n");
     console.log(cl.blue("\nIntroduce las coordenadas ([50-1000]). Todas deben ser diferentes."));
 
     let x1: number = Number(rl.question(cl.yellow("X1: ")));
@@ -38,10 +41,10 @@ function calcularDistances() {
     console.log(cl.cyan("Distancia requerida para el velo:"), cl.yellow(`${distanciaRequeridaMetros} metros`));
 
     if (distanciaRequeridaMetros >= distanciaSinEscala) {
-        console.log(cl.green("✅ Velo de invisibilidad activado"));
+        console.log(cl.green("Velo de invisibilidad activado"));
         console.log(cl.green("Godzilla no detectó la nave\n"));
     } else {
-        console.log(cl.red("❌ Velo de invisibilidad no activado"));
+        console.log(cl.red("Velo de invisibilidad no activado"));
     };
 };
 

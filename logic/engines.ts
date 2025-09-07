@@ -6,6 +6,9 @@ const { destroydScene } = require('../engine/scenes');
 
 async function engines() {
     console.clear();
+    console.log("\n");
+    console.log("\n");
+    console.log("\n");
     console.log(cl.green("\nNecesitamos saber la condicion de los propulsores (responde con true o false)."));
     const propulsores = rl.question(cl.red("Funcionan ambos propulsores?\n"));
 
